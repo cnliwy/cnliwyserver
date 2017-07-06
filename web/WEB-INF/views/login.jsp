@@ -13,6 +13,10 @@
 </head>
 <body>
 <h1>hello o 22222</h1>
-<a href="<%=basePath%>test.do">login</a>
+<form src="<%=basePath%>test.do">
+<input type="text" id="account" value="admin"/>
+<input type="password" id="password" value="123456"/>
+    <input type="submit" value="登录"/>
+</form>
 </body>
 </html>
