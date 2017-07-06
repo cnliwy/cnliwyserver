@@ -2,6 +2,7 @@ package com.liwy.server.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class LoginController {
+
     @RequestMapping("/login")
     public Object login(){
         System.out.println("收到了登录请求");
@@ -16,8 +18,8 @@ public class LoginController {
     }
 
     @RequestMapping("/test")
-    @ResponseBody
-    public Object test(){
-        return "hello world";
+    public Object test(@RequestParam String account,@RequestParam String password){
+        System.out.println("account=" + account + ",password=" + password);
+        return "index";
     }
 }
