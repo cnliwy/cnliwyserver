@@ -10,6 +10,7 @@
 
     <!-- 如果当前请求为“/”时，则转发到“/login” -->
     <mvc:view-controller path="/" view-name="forward:/login"/>
+
     <mvc:resources mapping="/image/**" location="/WEB-INF/resources/image/" />
     <mvc:resources mapping="/js/**" location="/WEB-INF/resources/bootstrap/js/" />
     <mvc:resources mapping="/css/**" location="/WEB-INF/resources/bootstrap/css/" />
@@ -22,4 +23,13 @@
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/views/"
           p:suffix=".jsp" />
+
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <!-- 多个拦截器，顺序执行 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.liwy.server.common.LoginInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
