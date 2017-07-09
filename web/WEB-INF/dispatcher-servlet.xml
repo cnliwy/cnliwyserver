@@ -5,8 +5,11 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+    <!-- 扫描器 -->
+    <mvc:annotation-driven />
     <!-- 配置自动扫描的包 -->
-    <context:component-scan base-package="com.liwy.server.controllers"></context:component-scan>
+    <context:component-scan base-package="com.liwy.server.controllers">
+    </context:component-scan>
 
     <!-- 如果当前请求为“/”时，则转发到“/login” -->
     <mvc:view-controller path="/" view-name="forward:/login"/>
@@ -18,7 +21,7 @@
 
     <!-- 当上面要访问的静态资源不包括在上面的配置中时，则根据此配置来访问 -->
     <mvc:default-servlet-handler/>
-    <mvc:annotation-driven />
+
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/views/"
@@ -32,4 +35,5 @@
             <bean class="com.liwy.server.common.LoginInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
+
 </beans>

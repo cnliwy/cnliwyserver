@@ -6,46 +6,71 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="base.jsp" %>
+<%@include file="menu.jsp" %>
 <html>
 <head>
-    <title>暮醉南山阁</title>
-    <!--引入bootstrap样式-->
-    <link href="<%=basePath%>/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="<%=basePath%>/css/login.css" rel="stylesheet" type="text/css"/>
-    <!--引入jquery脚本-->
-    <script src="<%=basePath%>js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <!--引入bootstrap脚本-->
-    <script src="<%=basePath%>js/bootstrap.js" type="text/javascript"></script>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">暮醉南山阁</a>
-        </div>
-        <div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">iOS</a></li>
-                <li><a href="#">Android</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Java
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">spring</a></li>
-                        <li><a href="#">struts2</a></li>
-                        <li><a href="#">mysql</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">html</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">js</a></li>
-                    </ul>
-                </li>
-            </ul>
+<div class="container">
+    <div class="row clearfix" style="margin-top: 80px;">
+        <div class="jumbotron well">
+            <h1>
+                Hello, world!
+            </h1>
+            <p>
+                This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+            </p>
+            <p>
+                <a class="btn btn-primary btn-large" href="#">Learn more</a>
+            </p>
         </div>
     </div>
-</nav>
+    <div class="row clearfix">
+        <div class="col-md-4 column">
+            <h2>
+                Heading
+            </h2>
+            <p>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </p>
+            <p>
+                <a class="btn" href="#">View details »</a>
+            </p>
+        </div>
+        <div class="col-md-4 column">
+            <h2>
+                Heading
+            </h2>
+            <p>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </p>
+            <p>
+                <a class="btn" href="#">View details »</a>
+            </p>
+        </div>
+        <div class="col-md-4 column">
+            <h2>
+                Heading
+            </h2>
+            <p>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </p>
+            <p>
+                <a class="btn" href="#">View details »</a>
+            </p>
+        </div>
+        <div class="col-md-4 column">
+            <h2>
+                Heading
+            </h2>
+            <p>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </p>
+            <p>
+                <a class="btn" href="#">View details »</a>
+            </p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
