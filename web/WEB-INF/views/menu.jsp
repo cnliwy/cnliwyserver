@@ -23,10 +23,10 @@
                             <a href="${basePath}/main">首页</a>
                         </li>
                         <li  id="test">
-                            <a href="${basePath}/test/test">接口测试</a>
+                            <a href="${basePath}/appdata/list">接口测试</a>
                         </li>
                         <li  id="navigator">
-                            <a href="${basePath}/test/test">导航</a>
+                            <a href="#">导航</a>
                         </li>
                     </ul>
                     <form class="navbar-form navbar-left" role="search">

@@ -1,16 +1,17 @@
 package com.liwy.server.controllers;
 
-import com.liwy.server.service.UserService;
+import com.google.gson.JsonObject;
+import com.liwy.server.service.iservice.UserService;
 import com.liwy.server.entity.User;
 import com.liwy.server.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,34 +27,61 @@ public class LoginController {
         return "login";
     }
 
-    @RequestMapping("/toRegister")
-    public Object toRegister(){
-        System.out.println("千万注册");
-        return "register";
-    }
+//    @RequestMapping("/register")
+//    public Object register(HttpSession session, User user){
+//        String result = "";
+//        String destination = "";
+//        System.out.println("注册用户" + user.toString());
+//        if (user != null && !StringUtils.isNull(user.getUsername()) && !StringUtils.isNull(user.getPassword()) && !StringUtils.isNull(user.getName())){
+//            List<User> users = userService.findUser("from User where username='" + user.getUsername() + "'");
+//            if (users != null && users.size() > 0){
+//                result = "用户名已存在";
+//                destination = "register";
+//            }else{
+//                userService.saveUser(user);
+//                result = "注册成功,请登录";
+//                destination = "login";
+//        }
+//        }else{
+//            result = "账号、密码和真实姓名不能为空";
+//            destination = "login";
+//        }
+//        ModelAndView mav = new ModelAndView(destination);
+//        mav.addObject("result", result);
+//        return mav;
+//    }
 
     @RequestMapping("/register")
+    @ResponseBody
     public Object register(HttpSession session, User user){
         String result = "";
         String destination = "";
+        int state = 0;// 请求成功
         System.out.println("注册用户" + user.toString());
+        JsonObject jsonObject = new JsonObject();
         if (user != null && !StringUtils.isNull(user.getUsername()) && !StringUtils.isNull(user.getPassword()) && !StringUtils.isNull(user.getName())){
             List<User> users = userService.findUser("from User where username='" + user.getUsername() + "'");
             if (users != null && users.size() > 0){
                 result = "用户名已存在";
                 destination = "register";
+                state = 2;
             }else{
+                user.setCreateTime(new Date());
                 userService.saveUser(user);
                 result = "注册成功,请登录";
                 destination = "login";
-        }
+            }
         }else{
             result = "账号、密码和真实姓名不能为空";
             destination = "login";
+            state = 1;
         }
-        ModelAndView mav = new ModelAndView(destination);
-        mav.addObject("result", result);
-        return mav;
+        jsonObject.addProperty("state",state);
+        jsonObject.addProperty("result",result);
+        return jsonObject.toString();
+//        ModelAndView mav = new ModelAndView(destination);
+//        mav.addObject("result", result);
+//        return mav;
     }
 
     @RequestMapping("/login")

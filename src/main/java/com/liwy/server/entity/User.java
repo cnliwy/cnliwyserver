@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by admin on 2017/7/8.
@@ -33,6 +34,10 @@ public class User implements Serializable{
 
     @Column
     private String phone;
+
+    @Column(name="create_time")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createTime;
 
     @Override
     public String toString() {
@@ -93,5 +98,13 @@ public class User implements Serializable{
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

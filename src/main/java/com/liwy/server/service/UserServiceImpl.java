@@ -1,10 +1,10 @@
 package com.liwy.server.service;
 
-import com.liwy.server.dao.UserDao;
+import com.liwy.server.dao.idao.UserDao;
 import com.liwy.server.entity.User;
+import com.liwy.server.service.iservice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.util.List;

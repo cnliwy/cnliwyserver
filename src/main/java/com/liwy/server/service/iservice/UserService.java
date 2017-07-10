@@ -1,4 +1,4 @@
-package com.liwy.server.service;
+package com.liwy.server.service.iservice;
 
 import com.liwy.server.entity.User;
 

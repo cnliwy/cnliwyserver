@@ -1,4 +1,4 @@
-package com.liwy.server.dao;
+package com.liwy.server.dao.idao;
 
 import com.liwy.server.dao.base.BaseDao;
 import com.liwy.server.entity.User;

@@ -45,7 +45,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
         //网站basePath
         modelAndView.addObject("basePath", basePath);
-        if (user != null) modelAndView.addObject("username",user.getUsername());
+        if (user != null) modelAndView.addObject("username",user.getName());
     }
 
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
