@@ -29,9 +29,9 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
      * @return org.hibernate.Session
      */
     protected Session getCurrentSession() {
-//      return sessionFactory.getCurrentSession(); // hibernate 3.x版本后摒弃该方法
+      return sessionFactory.getCurrentSession(); // hibernate 3.x版本后摒弃该方法
         //从会话工厂获取一个session
-        return sessionFactory.openSession();
+//        return sessionFactory.openSession();
     }
 
     public Serializable save(T o) {

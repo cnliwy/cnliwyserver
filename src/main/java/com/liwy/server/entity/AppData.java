@@ -30,6 +30,17 @@ public class AppData {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 
+    @Override
+    public String toString() {
+        return "AppData{" +
+                "id='" + id + '\'' +
+                ", userId='" + userId + '\'' +
+                ", jsonKey='" + jsonKey + '\'' +
+                ", jsonData='" + jsonData + '\'' +
+                ", createTime=" + createTime +
+                '}';
+    }
+
     public String getId() {
         return id;
     }

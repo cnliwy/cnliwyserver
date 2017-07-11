@@ -34,7 +34,7 @@
                             <input type="text" class="form-control" />
                         </div> <button type="submit" class="btn btn-default">Submit</button>
                     </form>
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" style="margin-right: 10px;">
                         <li>
                             <a href="#">Link</a>
                         </li>
@@ -45,15 +45,12 @@
                                     <a href="#">个人信息</a>
                                 </li>
                                 <li>
-                                    <a href="${basePath}/logout">退出登录</a>
-                                </li>
-                                <li>
-                                    <a href="#">Something else here</a>
+                                    <a href="#">设置</a>
                                 </li>
                                 <li class="divider">
                                 </li>
                                 <li>
-                                    <a href="#">Separated link</a>
+                                    <a href="${basePath}/logout">退出登录</a>
                                 </li>
                             </ul>
                         </li>

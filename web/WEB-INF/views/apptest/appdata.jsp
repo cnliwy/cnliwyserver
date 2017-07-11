@@ -21,6 +21,7 @@
                     <input type="text" name="jsonKey" id="jsonKey" class="form-control" placeholder="请输入key"/>
                     <input type="text" name="jsonData" id="jsonData" class="form-control" placeholder="请输入json内容"/>
                 </div> <button type="button" class="btn btn-default" onclick="add()">新增</button>
+                <a href="http://www.bejson.com/jsoneditoronline">在线JSON编辑器</a>
             </form>
             <table class="table table-hover">
                 <thead>
@@ -44,98 +45,62 @@
                 </thead>
                 <tbody>
                 <c:forEach items="${appDatas}" var="data" varStatus="status">
-                    <c:if test="${status.index % 2} > 0">
-                        <h4>hello</h4>
-                        <tr>
+                    <c:if test="${status.index % 2 == 0} ">
+                        <tr class="warning">
+                        <%--class状态success  error   info--%>
                     </c:if>
-                    <c:if test="${status.index % 2} == 0">
-                        <h4>world</h4>
+                    <c:if test="${status.index % 2 > 0}">
                         <tr class="success">
                     </c:if>
-                    <%--<tr>--%>
-                        <td>${status.index % 2}</td>
+                        <td>${status.index}</td>
                         <td>
                             ${data.jsonKey}
                         </td>
-                        <td> ${data.jsonData}</td>
+                        <td  id="${data.id}"> ${data.jsonData}</td>
                         <td>${data.createTime}</td>
                         <td>
-                            <a href="${basePath}/appdata/delete">删除</a>
+                            <a href="#" class="btn" onclick="showEdit('${data.id}','${data.jsonKey}')">编辑</a>
+                            <a href="#" class="btn" onclick="deleteAppData('${data.id}')">删除</a>
                         </td>
                     </tr>
                 </c:forEach>
-                <%--<tr>--%>
-                    <%--<td>--%>
-                        <%--1--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--TB - Monthly--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--01/04/2012--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--Default--%>
-                    <%--</td>--%>
-                <%--</tr>--%>
-                <%--<tr class="success">--%>
-                    <%--<td>--%>
-                        <%--1--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--TB - Monthly--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--01/04/2012--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--Approved--%>
-                    <%--</td>--%>
-                <%--</tr>--%>
-                <%--<tr class="error">--%>
-                    <%--<td>--%>
-                        <%--2--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--TB - Monthly--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--02/04/2012--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--Declined--%>
-                    <%--</td>--%>
-                <%--</tr>--%>
-                <%--<tr class="warning">--%>
-                    <%--<td>--%>
-                        <%--3--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--TB - Monthly--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--03/04/2012--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--Pending--%>
-                    <%--</td>--%>
-                <%--</tr>--%>
-                <%--<tr class="info">--%>
-                    <%--<td>--%>
-                        <%--4--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--TB - Monthly--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--04/04/2012--%>
-                    <%--</td>--%>
-                    <%--<td>--%>
-                        <%--Call in to confirm--%>
-                    <%--</td>--%>
-                <%--</tr>--%>
                 </tbody>
             </table>
+        </div>
+    </div>
+    <%--AppData数据编辑--%>
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="modal fade" id="div-edit" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <form class="form-horizontal" action="${basePath}/appdata/edit" method="post" id="form-edit">
+                    <input type="hidden" id="id-edit" name="id"/>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                编辑
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group" style="width: 80%;">
+                                <input type="text" class="form-control" name="jsonKey" id="jsonKey-edit" placeholder="请输入key">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control"  name="jsonData" id="jsonData-edit" placeholder="输入json数据"></textarea>
+                                <i class="fa fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" class="btn btn-primary" onclick="edit()">保存</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </div>
@@ -160,7 +125,59 @@
             dataType : "json",
             success : function (data) {
                 if(data.state == 0){
-                    alert("添加成功")
+                    window.location.href = "${basePath}/appdata/list";
+                }
+            },
+            error : function (data) {
+                alert("请求失败");
+            }
+        });
+    }
+
+    function deleteAppData(id) {
+        $.ajax({
+            type:"post",
+            url : "${basePath}/appdata/delete?id=" + id,
+            dataType : "json",
+            success : function (data) {
+                if(data.state == 0){
+                    alert("删除成功")
+                    window.location.href = "${basePath}/appdata/list";
+                }
+            },
+            error : function (data) {
+                alert("删除失败");
+            }
+        });
+    }
+    function showEdit(id,jsonKey) {
+        $("#id-edit").val(id);
+        $("#jsonKey-edit").val(jsonKey);
+        $("#jsonData-edit").val($("#"+id).html());
+        $("#div-edit").modal("show");
+    }
+    function edit(){
+        var jsonKey = $("#jsonKey-edit").val();
+        var jsonData = $("#jsonData-edit").val();
+        if(jsonData.length == 0 || jsonData.trim().length == 0){
+            alert("key不能为空")
+            return;
+        }
+        if(jsonData.length == 0 || jsonData.trim().length == 0){
+            alert("json数据不能为空")
+            return;
+        }
+
+        $.ajax({
+            type:"post",
+            url : "${basePath}/appdata/edit",
+            data : $("#form-edit").serialize(),
+            dataType : "json",
+            success : function (data) {
+                if(data.state == 0){
+                    window.location.href = "${basePath}/appdata/list";
+                }else{
+                    alert(data.result);
                 }
             },
             error : function (data) {
