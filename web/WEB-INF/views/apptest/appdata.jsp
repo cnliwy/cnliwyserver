@@ -23,6 +23,7 @@
                 </div> <button type="button" class="btn btn-default" onclick="add()">新增</button>
                 <%--<a href="http://www.bejson.com/jsoneditoronline">在线JSON编辑器</a>--%>
                 <a href="javascript:void(0);" onclick="window.open('http://www.bejson.com/jsoneditoronline','_blank');" target="_blank">在线JSON编辑器</a>
+                <a href="#div-help" data-toggle="modal">接口使用帮助</a>
             </form>
             <table class="table table-hover">
                 <thead>
@@ -104,6 +105,44 @@
 
         </div>
     </div>
+
+    <%--AppData接口使用帮助--%>
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="modal fade" id="div-help" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="helpLabel">
+                                    使用帮助
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group" style="width: 80%;">
+                                    <h4 class="modal-title">
+                                        获取json数据的方式：<br/>
+                                        1.url:${basePath}/appdata/getTestData<br/>
+                                        2.参数：identity和jsonKey<br/>
+                                        3.get和post均可访问。<br/>
+                                        4.根据不同的jsonKey获取相应的json数据<br/>
+                                    </h4>
+                                </div>
+                                <div class="form-group">
+                                    我的identity值：${identity}<br/>
+                                    jsonKey即是下方列表里的jsonKey<br/>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" class="btn btn-primary" onclick="edit()">保存</button>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 </div>
 </body>
 <script>
@@ -111,11 +150,11 @@
         var jsonKey = $("#jsonKey").val();
         var jsonData = $("#jsonData").val();
         if(jsonData.length == 0 || jsonData.trim().length == 0){
-            alert("账号不能为空")
+            alert("jsonKey不能为空")
             return;
         }
         if(jsonData.length == 0 || jsonData.trim().length == 0){
-            alert("密码不能为空")
+            alert("json数据不能为空")
             return;
         }
 

@@ -29,15 +29,15 @@
                             <a href="#">导航</a>
                         </li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" />
-                        </div> <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
+                    <%--<form class="navbar-form navbar-left" role="search">--%>
+                        <%--<div class="form-group">--%>
+                            <%--<input type="text" class="form-control" />--%>
+                        <%--</div> <button type="submit" class="btn btn-default">Submit</button>--%>
+                    <%--</form>--%>
                     <ul class="nav navbar-nav navbar-right" style="margin-right: 10px;">
-                        <li>
-                            <a href="#">Link</a>
-                        </li>
+                        <%--<li>--%>
+                            <%--<a href="#">Link</a>--%>
+                        <%--</li>--%>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">${username}<strong class="caret"></strong></a>
                             <ul class="dropdown-menu">

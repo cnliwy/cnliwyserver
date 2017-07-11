@@ -33,6 +33,7 @@ public class AppDataController {
         List<AppData> list = appDataService.getAppDatas(user.getId(),null);
         ModelAndView mav = new ModelAndView("apptest/appdata");
         mav.addObject("menu","test");
+        mav.addObject("identity",user.getId());
         mav.addObject("appDatas",list);
         return mav;
     }
@@ -74,9 +75,9 @@ public class AppDataController {
 
     @RequestMapping(value = "/getTestData", method = {RequestMethod.POST,RequestMethod.GET})
     @ResponseBody
-    public Object getData(@RequestParam String session,@RequestParam String jsonKey){
-        System.out.println("请求的session=" + session + ",jsonKey:" + jsonKey);
-        List<AppData> datas =  appDataService.getAppDatas(session,jsonKey);
+    public Object getData(@RequestParam(required = false) String identity,@RequestParam(required = false) String jsonKey){
+        System.out.println("请求的identity=" + identity + ",jsonKey:" + jsonKey);
+        List<AppData> datas =  appDataService.getAppDatas(identity,jsonKey);
         if (datas != null && datas.size() > 0){
             System.out.println("查到数据:" + datas.get(0).toString());
             return datas.get(0).getJsonData();
