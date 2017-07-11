@@ -21,7 +21,8 @@
                     <input type="text" name="jsonKey" id="jsonKey" class="form-control" placeholder="请输入key"/>
                     <input type="text" name="jsonData" id="jsonData" class="form-control" placeholder="请输入json内容"/>
                 </div> <button type="button" class="btn btn-default" onclick="add()">新增</button>
-                <a href="http://www.bejson.com/jsoneditoronline">在线JSON编辑器</a>
+                <%--<a href="http://www.bejson.com/jsoneditoronline">在线JSON编辑器</a>--%>
+                <a href="javascript:void(0);" onclick="window.open('http://www.bejson.com/jsoneditoronline','_blank');" target="_blank">在线JSON编辑器</a>
             </form>
             <table class="table table-hover">
                 <thead>

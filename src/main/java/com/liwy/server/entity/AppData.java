@@ -23,7 +23,7 @@ public class AppData {
     @Column(name = "json_key")
     private String jsonKey;
 
-    @Column(name = "json_data")
+    @Column(name = "json_data",length = 2000)
     private String jsonData;
 
     @Column(name="create_time")
