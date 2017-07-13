@@ -26,7 +26,7 @@
                             <a href="${basePath}/appdata/list">接口测试</a>
                         </li>
                         <li  id="navigator">
-                            <a href="#">导航</a>
+                            <a href="#">推送测试</a>
                         </li>
                     </ul>
                     <%--<form class="navbar-form navbar-left" role="search">--%>
