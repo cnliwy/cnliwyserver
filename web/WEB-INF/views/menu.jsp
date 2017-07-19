@@ -22,6 +22,9 @@
                         <li  id="index">
                             <a href="${basePath}/main">首页</a>
                         </li>
+                        <li  id="plan">
+                            <a href="${basePath}/plan/planManage">日程安排</a>
+                        </li>
                         <li  id="test">
                             <a href="${basePath}/appdata/list">接口测试</a>
                         </li>
@@ -29,11 +32,21 @@
                             <a href="${basePath}/push/pushManage">推送测试</a>
                         </li>
                     </ul>
-                    <%--<form class="navbar-form navbar-left" role="search">--%>
-                        <%--<div class="form-group">--%>
-                            <%--<input type="text" class="form-control" />--%>
-                        <%--</div> <button type="submit" class="btn btn-default">Submit</button>--%>
-                    <%--</form>--%>
+                    <ul class="nav navbar-nav">
+                        <%--点击打开的时候设置为： dropdown open--%>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">权限管理<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">角色管理</a>
+                                </li>
+                                <li>
+                                    <a href="#">角色权限</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
                     <ul class="nav navbar-nav navbar-right" style="margin-right: 10px;">
                         <%--<li>--%>
                             <%--<a href="#">Link</a>--%>
