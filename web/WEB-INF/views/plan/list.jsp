@@ -7,12 +7,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../menu.jsp"%>
-<%@include file="../menuleft.jsp"%>
 <html>
 <head>
 </head>
 <body>
-<div class="container" style="float:left">
+<div class="container" style="margin-top: 80px;">
     <div class="row clearfix">
                 <%--<div class="col-md-10">--%>
                     <%--page内容--%>

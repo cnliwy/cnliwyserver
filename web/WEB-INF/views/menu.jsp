@@ -22,9 +22,23 @@
                         <li  id="index">
                             <a href="${basePath}/main">首页</a>
                         </li>
-                        <li  id="plan">
-                            <a href="${basePath}/plan/planManage">日程安排</a>
-                        </li>
+                        <%--<li  id="plan">--%>
+                            <%--<a href="${basePath}/plan/list">日程安排</a>--%>
+                        <%--</li>--%>
+                        <ul class="nav navbar-nav">
+                            <%--点击打开的时候设置为： dropdown open--%>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">日程安排<strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li id="planList">
+                                        <a href="${basePath}/plan/list">列表</a>
+                                    </li>
+                                    <li id="planAdd">
+                                        <a href="${basePath}/plan/toAdd">新增</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                         <li  id="test">
                             <a href="${basePath}/appdata/list">接口测试</a>
                         </li>

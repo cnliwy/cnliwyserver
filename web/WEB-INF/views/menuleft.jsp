@@ -28,8 +28,8 @@
         <%--<div class="row">--%>
             <%--<div class="col-md-2">--%>
             <ul id="main-nav" class="nav nav-tabs nav-stacked" style="float: none">
-                <li class="active">
-                    <a href="#">
+                <li  id="list">
+                    <a href="${basePath}/plan/list">
                         <i class="glyphicon glyphicon-th-large"></i>
                         我的
                     </a>
@@ -48,8 +48,8 @@
                         <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>日志查看</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="./plans.html">
+                <li id="add">
+                    <a href="${basePath}/plan/toAdd">
                         <i class="glyphicon glyphicon-credit-card"></i>
                         新增计划
                     </a>
@@ -82,4 +82,11 @@
     </div>
 </div>
 </body>
+<script>
+    // 根据当前页面使菜单高亮
+    $(function() {
+        var menu = "${plan}";
+        $("#" + menu).addClass("active"); // 追加样式
+    });
+</script>
 </html>
