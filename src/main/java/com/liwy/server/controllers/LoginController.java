@@ -22,9 +22,11 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/index")
-    public Object toIndex(){
-        return "index";
+    @RequestMapping(value = "/")
+    public  ModelAndView  home() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("index");
+        return mav;
     }
 
     @RequestMapping("/toLogin")

@@ -58,7 +58,7 @@
 									<span class="icon-bar"></span>
 							</button>
 							<!--=== Site Name ===-->
-							<a class="site-name" href="#"><span>E</span>EasyLife</a>
+							<a class="site-name" href="#"><span>E</span>EasyLife:${basePath}</a>
 						</div>
 						
 						<!-- Main Navigation menu Starts -->
