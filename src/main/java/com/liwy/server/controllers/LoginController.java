@@ -22,6 +22,11 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping("/index")
+    public Object toIndex(){
+        return "index";
+    }
+
     @RequestMapping("/toLogin")
     public Object toLogin(){
         return "login";

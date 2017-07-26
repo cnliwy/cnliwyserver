@@ -16,7 +16,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         //获取请求的URL
         String url = request.getRequestURI();
         //URL:login.jsp是公开的;这个demo是除了login.jsp是可以公开访问的，其它的URL都进行拦截控制
-        if(url.indexOf("login")>=0 || url.indexOf("toLogin")>=0 || url.indexOf("push")>=0|| url.indexOf("register")>=0|| url.indexOf("getTestData")>=0){
+        if(url.indexOf("login")>=0 || url.indexOf("toLogin")>=0 || url.indexOf("push")>=0|| url.indexOf("register")>=0|| url.indexOf("index")>=0){
             return true;
         }
         //获取Session

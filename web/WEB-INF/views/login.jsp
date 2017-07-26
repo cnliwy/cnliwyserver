@@ -41,7 +41,7 @@
         }
         #background .bg-photo-auto
         {
-            background: url(${basePath}/image/background-login.jpg) no-repeat center center;
+            background: url(${basePath}/images/background-login.jpg) no-repeat center center;
         }
 
         #background-ie {
