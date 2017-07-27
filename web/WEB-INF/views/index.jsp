@@ -1,11 +1,15 @@
 <!DOCTYPE HTML>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="base.jsp" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
+	<title>暮醉南山阁</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="${basePath}/css/bootstrap.css" />
+	<%--<link rel="stylesheet" href="${basePath}/css/bootstrap.css" />--%>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="${basePath}/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="${basePath}/css/linea-icon.css" />
 	<link rel="stylesheet" href="${basePath}/css/fancy-buttons.css" />
@@ -58,7 +62,7 @@
 									<span class="icon-bar"></span>
 							</button>
 							<!--=== Site Name ===-->
-							<a class="site-name" href="#"><span>E</span>EasyLife:${basePath}</a>
+							<a class="site-name" href="#"><span>E</span>EasyLife</a>
 						</div>
 						
 						<!-- Main Navigation menu Starts -->
@@ -459,7 +463,7 @@
 								<h4>Wordpress theme</h4>
 							</div>
 							<span class="photo-zoom">
-								<a href="single-project.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
+								<a href="http://www.baidu.com" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
 							</span>
 						</div>
 					</div>
@@ -475,7 +479,8 @@
 								<h4>User Interface design</h4>
 							</div>
 							<span class="photo-zoom">
-								<a href="single-project-2.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
+								<%--<a href="single-project-2.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>--%>
+								<a href="#" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
 							</span>
 						</div>
 						
@@ -509,7 +514,7 @@
 								<h4>User Experience design</h4>
 							</div>
 							<span class="photo-zoom">
-								<a href="single-project-2.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
+								<a href="#" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
 							</span>
 						</div>
 						
@@ -543,7 +548,7 @@
 								<h4>Corporate website</h4>
 							</div>
 							<span class="photo-zoom">
-								<a href="single-project-2.html" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
+								<a href="#" class="view-project"><i class="fa fa-search-plus fa-2x"></i></a>
 							</span>
 						</div>
 						
@@ -924,28 +929,28 @@
 	
 <!--==== Js files ====-->
 <!--==== Essential files ====-->
-<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
-<script type="text/javascript" src="js/modernizr.js"></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="${basePath}/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="${basePath}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${basePath}/js/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="${basePath}/js/modernizr.js"></script>
+<script type="text/javascript" src="${basePath}/js/jquery.easing.1.3.js"></script>
 
 <!--==== Slider and Card style plugin ====-->
-<script type="text/javascript" src="js/jquery.baraja.js"></script>
-<script type="text/javascript" src="js/jquery.vegas.min.js"></script>
-<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="${basePath}/js/jquery.baraja.js"></script>
+<script type="text/javascript" src="${basePath}/js/jquery.vegas.min.js"></script>
+<script type="text/javascript" src="${basePath}/js/jquery.bxslider.min.js"></script>
 
 <!--==== MailChimp Widget plugin ====-->
-<script type="text/javascript" src="js/jquery.ajaxchimp.min.js"></script>
+<script type="text/javascript" src="${basePath}/js/jquery.ajaxchimp.min.js"></script>
 
 <!--==== Scroll and navigation plugins ====-->
-<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
-<script type="text/javascript" src="js/jquery.nav.js"></script>
-<script type="text/javascript" src="js/jquery.appear.js"></script>
-<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="${basePath}/js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="${basePath}/js/jquery.nav.js"></script>
+<script type="text/javascript" src="${basePath}/js/jquery.appear.js"></script>
+<script type="text/javascript" src="${basePath}/js/jquery.fitvids.js"></script>
 
 <!--==== Custom Script files ====-->
-<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="${basePath}/js/custom.js"></script>
 
 </body>
 </html>

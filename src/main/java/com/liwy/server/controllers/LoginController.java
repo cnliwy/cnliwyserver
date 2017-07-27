@@ -22,7 +22,7 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = {"/index","/"})
     public  ModelAndView  home() {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("index");
@@ -33,30 +33,6 @@ public class LoginController {
     public Object toLogin(){
         return "login";
     }
-
-//    @RequestMapping("/register")
-//    public Object register(HttpSession session, User user){
-//        String result = "";
-//        String destination = "";
-//        System.out.println("注册用户" + user.toString());
-//        if (user != null && !StringUtils.isNull(user.getUsername()) && !StringUtils.isNull(user.getPassword()) && !StringUtils.isNull(user.getName())){
-//            List<User> users = userService.findUser("from User where username='" + user.getUsername() + "'");
-//            if (users != null && users.size() > 0){
-//                result = "用户名已存在";
-//                destination = "register";
-//            }else{
-//                userService.saveUser(user);
-//                result = "注册成功,请登录";
-//                destination = "login";
-//        }
-//        }else{
-//            result = "账号、密码和真实姓名不能为空";
-//            destination = "login";
-//        }
-//        ModelAndView mav = new ModelAndView(destination);
-//        mav.addObject("result", result);
-//        return mav;
-//    }
 
     @RequestMapping("/register")
     @ResponseBody

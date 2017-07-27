@@ -172,15 +172,15 @@
         var qq = $("#qq").val();
         var phone = $("#phone").val();
         if(username.length == 0 || username.trim().length == 0){
-            alert("账号不能为空")
+            alert("账号不能为空");
             return;
         }
         if(password.length == 0 || password.trim().length == 0){
-            alert("密码不能为空")
+            alert("密码不能为空");
             return;
         }
         if(name.length == 0 || name.trim().length == 0){
-            alert("姓名不能为空")
+            alert("姓名不能为空");
             return;
         }
         $.ajax({
@@ -207,6 +207,8 @@
         var result = $("#result").val();
         if(result.length > 0){
             alert(result);
+        }else{
+            $('#id-login').modal('toggle');
         }
     });
    </script>

@@ -18,6 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
     <!--引入jquery脚本-->
     <%--jquery-3.2.1.min--%>
     <%--<script src="${basePath}/js/jquery.js" type="text/javascript"></script>--%>
