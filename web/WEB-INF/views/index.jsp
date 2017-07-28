@@ -128,7 +128,7 @@
 							<!-- Single Feature Starts -->
 							<li class="single-feature" title="Card style">
 								<img src="images/5.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-								<h4 class="feature-title color-scheme">Card style</h4>
+								<h4 class="feature-title color-scheme">音乐</h4>
 								<p class="feature-text">
 									Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut.
 								</p>
@@ -146,7 +146,7 @@
 							<!-- Single Feature Starts -->
 							<li class="single-feature" title="50+ SVG Icon included">
 								<img src="images/2.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-								<h4 class="feature-title color-scheme">50+ SVG Icon included</h4>
+								<h4 class="feature-title color-scheme">笑话</h4>
 								<p class="feature-text">
 									Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
 								</p>
@@ -162,7 +162,7 @@
 							<!-- Single Feature Starts -->
 							<li class="single-feature" title="MailChimp Ready">
 								<img src="images/3.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-								<h4 class="feature-title color-scheme">MailChimp Ready</h4>
+								<h4 class="feature-title color-scheme">新闻</h4>
 								<p class="feature-text">
 									Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
 								</p>
@@ -178,7 +178,7 @@
 							<!-- Single Feature Starts -->
 							<li class="single-feature" title="4 home style">
 								<img src="images/4.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-								<h4 class="feature-title color-scheme">4 home style</h4>
+								<h4 class="feature-title color-scheme">聊天</h4>
 								<p class="feature-text">
 									Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
 								</p>
@@ -194,7 +194,7 @@
 							<!-- Single Feature Starts -->
 							<li class="single-feature" title="Parallax Backgrounds">
 								<img src="images/5.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-								<h4 class="feature-title color-scheme">Parallax Backgrounds</h4>
+								<h4 class="feature-title color-scheme">工具</h4>
 								<p class="feature-text">
 									Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
 								</p>
@@ -210,7 +210,7 @@
 							<!-- Single Feature Starts -->
 							<li class="single-feature" title="Ajax contact form">
 								<img src="images/6.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-								<h4 class="feature-title color-scheme">Ajax contact form</h4>
+								<h4 class="feature-title color-scheme">享受生活</h4>
 								<p class="feature-text">
 									Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
 								</p>
@@ -226,7 +226,7 @@
 							<!-- Single Feature Starts -->
 							<li class="single-feature" title="unlimited Google fonts">
 								<img src="images/7.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-								<h4 class="feature-title color-scheme">unlimited Google fonts</h4>
+								<h4 class="feature-title color-scheme">每一天</h4>
 								<p class="feature-text">
 									Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
 								</p>
@@ -242,7 +242,7 @@
 							<!-- Single Feature Starts -->
 							<li class="single-feature" title="Feature heading">
 								<img src="images/8.jpg" alt="" class="feature-image" /><!-- Feature Icon -->
-								<h4 class="feature-title color-scheme">Feature heading</h4>
+								<h4 class="feature-title color-scheme">坚持梦想</h4>
 								<p class="feature-text">
 									Curabitur posuere feugiat ipsum, sed elementum tortor maximus ut
 								</p>
@@ -365,7 +365,7 @@
 					</div>
 					
 					<div class="col-md-10 step-details">
-							<h3 class="step-title color-scheme">Work flow title here</h3>
+							<h3 class="step-title color-scheme">一年之计在于春</h3>
 							<p class="step-description">Cillum laboris <strong>consequat</strong>, qui elit retro next level 
 							skateboard freegan hella. Cillum laboris consequat qui elit retro next level 
 							skateboard freegan hella. Cillum laboris consequat skateboard freegan hella</p>
@@ -404,7 +404,7 @@
 					</div>
 					
 					<div class="col-md-10 step-details">
-							<h3 class="step-title color-scheme">Work flow title here</h3>
+							<h3 class="step-title color-scheme">一日之计在于晨</h3>
 							<p class="step-description">Cillum laboris <strong>consequat</strong>, qui elit retro next level 
 							skateboard freegan hella. Cillum laboris consequat qui elit retro next level 
 							skateboard freegan hella. Cillum laboris consequat skateboard freegan hella</p>
