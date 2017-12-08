@@ -21,7 +21,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         String str = basePath + "/";
         boolean isIndex = request.getRequestURL().toString().equals(str);//判断是否是首页
         //URL:login.jsp是公开的;这个demo是除了login.jsp是可以公开访问的，其它的URL都进行拦截控制
-        if(url.indexOf("login")>=0 || url.indexOf("toLogin")>=0 || url.indexOf("push")>=0|| url.indexOf("register")>=0|| url.indexOf("index")>=0 || isIndex){
+        if(url.indexOf("login")>=0|| url.indexOf("appdata")>=0  || url.indexOf("toLogin")>=0 || url.indexOf("push")>=0|| url.indexOf("register")>=0|| url.indexOf("index")>=0 || isIndex){
             return true;
         }
         //获取Session
@@ -40,7 +40,6 @@ public class LoginInterceptor implements HandlerInterceptor {
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         initBasePath(request);
         if (null == modelAndView) {
-            System.out.println("modelAndView == null!!!!!!!!!!!!!");
             return;
         }
         //获取Session
